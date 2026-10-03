@@ -9,7 +9,6 @@
 A small design system built with React, TypeScript, Vite, Storybook, and Vitest.
 
 🔗 **[Live Demo](https://react-component-library-blue.vercel.app/)**
-📦 **[npm Package](https://www.npmjs.com/package/my-component-library)** (if published)
 
 ## Components
 - **Accordion** — accessible, flexible panels with a simple composition API
