@@ -13,7 +13,9 @@
     }
   },
   "scripts": {
-    "build": "tsc --declaration --emitDeclarationOnly --outDir dist/types --rootDir src --jsx react-jsx --target ES2022 --module ESNext --moduleResolution Bundler --skipLibCheck src/index.ts src/assets.d.ts && vite build",
+    "dev": "vite --host 0.0.0.0",
+    "build": "vite build",
+    "build:library": "tsc --declaration --emitDeclarationOnly --outDir dist/types --rootDir src --jsx react-jsx --target ES2022 --module ESNext --moduleResolution Bundler --skipLibCheck src/index.ts src/assets.d.ts && vite build --config vite.lib.config.ts",
     "test": "vitest",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
