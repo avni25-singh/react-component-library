@@ -1,0 +1,308 @@
+.storybook-shell {
+  min-height: 100vh;
+  overflow: hidden;
+  background: #f6f7fb;
+  color: #20233d;
+  font-family: Inter, 'Nunito Sans', 'Helvetica Neue', Arial, sans-serif;
+}
+
+.storybook-page {
+  width: min(1120px, calc(100% - 48px));
+  margin: 0 auto;
+  padding: 64px 0 28px;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.storybook-hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: clamp(36px, 7vw, 76px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 28px;
+  background: linear-gradient(120deg, #222344 0%, #333665 58%, #514c91 100%);
+  box-shadow: 0 24px 60px rgba(37, 39, 80, 0.18);
+  color: #fff;
+}
+
+.storybook-eyebrow,
+.section-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: #bfc4ff;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.eyebrow-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #84e1c3;
+  box-shadow: 0 0 0 5px rgba(132, 225, 195, 0.13);
+}
+
+.storybook-hero h2 {
+  position: relative;
+  z-index: 1;
+  max-width: 720px;
+  margin: 22px 0 18px;
+  font-size: clamp(38px, 6vw, 66px);
+  font-weight: 750;
+  letter-spacing: -0.055em;
+  line-height: 1.05;
+}
+
+.storybook-hero h2 span {
+  color: #b9bcff;
+}
+
+.hero-copy {
+  position: relative;
+  z-index: 1;
+  max-width: 570px;
+  margin: 0;
+  color: #d5d6eb;
+  font-size: clamp(15px, 2vw, 18px);
+}
+
+.hero-copy a {
+  color: #fff;
+  text-decoration-color: #a6a9f7;
+  text-underline-offset: 4px;
+}
+
+.hero-link {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 28px;
+  padding: 12px 17px;
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background 160ms ease, transform 160ms ease;
+}
+
+.hero-link:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.hero-link span {
+  display: grid;
+  width: 20px;
+  height: 20px;
+  place-items: center;
+  border-radius: 50%;
+  background: #c3c5ff;
+  color: #29294b;
+}
+
+.hero-orbit {
+  position: absolute;
+  z-index: -1;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.hero-orbit-one {
+  top: -245px;
+  right: -95px;
+  width: 570px;
+  height: 570px;
+}
+
+.hero-orbit-two {
+  top: -150px;
+  right: -5px;
+  width: 390px;
+  height: 390px;
+  background: radial-gradient(circle, rgba(155, 149, 255, 0.16), transparent 68%);
+}
+
+.storybook-content {
+  padding: 62px 0 0;
+}
+
+.section-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.section-kicker {
+  color: #7476b8;
+  font-size: 10px;
+}
+
+.section-heading h3 {
+  margin: 8px 0 0;
+  color: #262744;
+  font-size: clamp(23px, 3vw, 31px);
+  letter-spacing: -0.04em;
+  line-height: 1.2;
+}
+
+.section-heading > p {
+  max-width: 290px;
+  margin: 0 0 3px;
+  color: #77798e;
+  font-size: 13px;
+}
+
+.storybook-cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.storybook-card {
+  position: relative;
+  min-height: 250px;
+  padding: 25px;
+  border: 1px solid #e7e8f0;
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 8px 22px rgba(35, 37, 74, 0.035);
+  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+}
+
+.storybook-card:hover {
+  transform: translateY(-4px);
+  border-color: #d4d5ee;
+  box-shadow: 0 16px 30px rgba(35, 37, 74, 0.09);
+}
+
+.card-number {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  color: #a4a5b8;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.card-icon {
+  display: grid;
+  width: 44px;
+  height: 44px;
+  place-items: center;
+  border-radius: 14px;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+.card-icon-purple { background: #eeedff; color: #625dc0; }
+.card-icon-blue { background: #e5f3ff; color: #3874a8; }
+.card-icon-peach { background: #fff0e8; color: #bd6f4b; }
+
+.storybook-card h4 {
+  margin: 21px 0 8px;
+  color: #282943;
+  font-size: 16px;
+  letter-spacing: -0.02em;
+}
+
+.storybook-card p {
+  min-height: 67px;
+  margin: 0 0 16px;
+  color: #74768b;
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+.storybook-card a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #5553a6;
+  font-size: 12px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.storybook-card a:hover,
+.storybook-footer-row a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.storybook-footer-row {
+  margin-top: 22px;
+  padding: 17px 20px;
+  border: 1px solid #e6e7f0;
+  border-radius: 14px;
+  background: #f0f0f9;
+  color: #62647a;
+  font-size: 13px;
+}
+
+.storybook-footer-row p { margin: 0; }
+.storybook-footer-row a { color: #4f4b9b; font-weight: 800; }
+
+.tip-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 22px 0 0;
+  color: #76788b;
+  font-size: 12px;
+}
+
+.storybook-page .tip {
+  padding: 3px 9px;
+  border-radius: 999px;
+  background: #e4f5ed;
+  color: #26785b;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.storybook-page .tip-wrapper svg { width: 13px; height: 13px; flex: 0 0 auto; }
+.storybook-page .tip-wrapper svg path { fill: #6261b2; }
+
+.storybook-page a:focus-visible,
+.storybook-card a:focus-visible {
+  outline: 3px solid #918df0;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+@media (max-width: 760px) {
+  .storybook-page { width: min(100% - 32px, 600px); padding-top: 32px; }
+  .storybook-content { padding-top: 42px; }
+  .section-heading { align-items: start; flex-direction: column; gap: 9px; }
+  .storybook-cards { grid-template-columns: 1fr; }
+  .storybook-card { min-height: auto; }
+  .storybook-card p { min-height: 0; }
+}
+
+@media (max-width: 480px) {
+  .storybook-page { width: calc(100% - 24px); padding-top: 20px; }
+  .storybook-hero { padding: 30px 24px; border-radius: 20px; }
+  .storybook-hero h2 { font-size: 39px; }
+  .hero-orbit-one { right: -360px; }
+  .hero-orbit-two { right: -280px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; transition-duration: 0.01ms !important; }
+}

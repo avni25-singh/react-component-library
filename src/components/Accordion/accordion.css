@@ -1,0 +1,186 @@
+.accordion {
+  box-sizing: border-box;
+  width: min(100%, 720px);
+  margin: 0 auto;
+  padding: 14px;
+  border: 1px solid #e8e8f0;
+  border-radius: 22px;
+  background: #fff;
+  box-shadow: 0 20px 55px rgba(35, 37, 76, 0.09);
+  color: #292a45;
+  font-family: Inter, 'Nunito Sans', 'Helvetica Neue', Arial, sans-serif;
+}
+
+.accordion-intro {
+  padding: 20px 22px 24px;
+}
+
+.accordion-intro-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #6664ad;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.accordion-intro-eyebrow::before {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #70c5a4;
+  content: '';
+}
+
+.accordion-intro h2 {
+  margin: 12px 0 7px;
+  color: #282943;
+  font-size: clamp(22px, 4vw, 29px);
+  letter-spacing: -0.045em;
+  line-height: 1.2;
+}
+
+.accordion-intro p {
+  max-width: 540px;
+  margin: 0;
+  color: #74768b;
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+.accordion-item {
+  overflow: hidden;
+  margin-top: 9px;
+  border: 1px solid #e9eaf1;
+  border-radius: 14px;
+  background: #fff;
+  transition: border-color 160ms ease, background-color 160ms ease, box-shadow 160ms ease;
+}
+
+.accordion-item[data-state='open'] {
+  border-color: #d9d8f0;
+  background: #fbfbff;
+  box-shadow: 0 5px 16px rgba(47, 48, 97, 0.055);
+}
+
+.accordion-trigger {
+  display: flex;
+  width: 100%;
+  min-height: 62px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 15px 18px;
+  border: 0;
+  background: transparent;
+  color: #30314d;
+  cursor: pointer;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.4;
+  text-align: left;
+  transition: color 160ms ease;
+}
+
+.accordion-trigger:hover,
+.accordion-item[data-state='open'] .accordion-trigger {
+  color: #5553a6;
+}
+
+.accordion-trigger:focus-visible {
+  position: relative;
+  z-index: 1;
+  outline: 3px solid #aaa8ef;
+  outline-offset: -4px;
+  border-radius: 13px;
+}
+
+.accordion-chevron {
+  position: relative;
+  display: grid;
+  width: 28px;
+  height: 28px;
+  flex: 0 0 28px;
+  place-items: center;
+  border: 1px solid #e5e5ef;
+  border-radius: 50%;
+  background: #f8f8fc;
+  transition: transform 180ms ease, background-color 180ms ease, border-color 180ms ease;
+}
+
+.accordion-chevron::before,
+.accordion-chevron::after {
+  position: absolute;
+  width: 10px;
+  height: 1.5px;
+  border-radius: 2px;
+  background: #66678a;
+  content: '';
+}
+
+.accordion-chevron::after { transform: rotate(90deg); transition: transform 180ms ease; }
+.accordion-item[data-state='open'] .accordion-chevron {
+  transform: rotate(180deg);
+  border-color: #d8d7f0;
+  background: #efefff;
+}
+.accordion-item[data-state='open'] .accordion-chevron::after { transform: rotate(0); }
+
+.accordion-panel {
+  padding: 0 18px 19px;
+  color: #6e7086;
+  font-size: 13px;
+  line-height: 1.75;
+  animation: accordion-panel-in 180ms ease-out both;
+}
+
+.accordion-panel p { margin: 0; }
+.accordion-panel p + p { margin-top: 10px; }
+.accordion-panel strong { color: #3c3d5c; }
+.accordion-panel a { color: #5553a6; font-weight: 700; text-underline-offset: 3px; }
+
+.accordion-panel-list {
+  display: grid;
+  gap: 8px;
+  margin: 12px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.accordion-panel-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+}
+
+.accordion-panel-list li::before {
+  width: 6px;
+  height: 6px;
+  flex: 0 0 6px;
+  margin-top: 8px;
+  border-radius: 50%;
+  background: #8583d2;
+  content: '';
+}
+
+@keyframes accordion-panel-in {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 520px) {
+  .accordion { padding: 9px; border-radius: 17px; }
+  .accordion-intro { padding: 17px 13px 19px; }
+  .accordion-trigger { min-height: 58px; padding: 13px 13px; font-size: 13px; }
+  .accordion-panel { padding: 0 13px 16px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .accordion-item,
+  .accordion-chevron,
+  .accordion-chevron::after,
+  .accordion-panel { animation: none; transition: none; }
+}
